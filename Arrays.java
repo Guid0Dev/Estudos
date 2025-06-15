@@ -11,7 +11,8 @@ public class Arrays{
                 System.out.print("Informe seu nome: ");
                 nome = sc.nextLine();
 
-                if(!nome.matches("[a-zA-Zà-úÀ-Ú\\s]+")){
+                if(!nome.matches("[a-zA-Zà-úÀ-Ú\\s]+")
+                ){
                     throw new IllegalArgumentException("Nome invalido, digite apenas letras.");
                 }
 
