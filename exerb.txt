@@ -1,0 +1,158 @@
+Excelente! Vamos colocar em prática tudo o que você aprendeu até agora com um desafio completo de entrada, validação e tratamento de exceções. Isso vai te ajudar a fixar os conceitos de:
+
+nextLine() para leitura
+
+parseInt() / parseDouble() com try-catch
+
+NumberFormatException e IllegalArgumentException
+
+Regex para validar texto (como nome e e-mail)
+
+🧩 Desafio prático: Cadastro de usuário com validação
+🎯 Objetivo:
+Crie um programa que solicite ao usuário os seguintes dados:
+
+Nome completo – Deve conter apenas letras e espaços.
+
+Idade – Deve ser um número inteiro entre 1 e 130.
+
+Salário – Deve ser um número decimal positivo (pode conter , ou .).
+
+E-mail – Deve seguir um formato válido, como exemplo@dominio.com.
+
+📋 Regras:
+Use Scanner.nextLine() para todas as entradas.
+
+Converta os valores com Integer.parseInt() ou Double.parseDouble().
+
+Faça a validação de cada item dentro de um while(true) com try-catch.
+
+Use regex para validar nome e e-mail.
+
+Só avance para o próximo campo se o anterior for válido.
+
+
+=======================================================================
+📚 Lista de tópicos para estudar — com prioridade baseada em suas dúvidas
+🟢 Prioridade Alta (Essencial e com maior dificuldade identificada)
+Tratamento de Exceções em Java (try-catch)
+
+Uso do try, catch, e finally
+
+Ordem dos blocos catch (específico → genérico)
+
+Diferença entre Exception, RuntimeException, IllegalArgumentException, NumberFormatException, etc.
+
+Conversão de Strings para Números
+
+Integer.parseInt(), Double.parseDouble()
+
+Como tratar erros com NumberFormatException
+
+Uso correto do Scanner
+
+Diferença entre next(), nextLine(), nextInt()
+
+Problemas de buffer e como evitá-los
+
+Laços de repetição com validação (while(true) + break)
+
+Uso para revalidar dados até entrada correta
+
+Combinação com try-catch
+
+🟡 Prioridade Média (Compreensão razoável, mas ainda merece atenção)
+Regex (Expressões Regulares) em Java
+
+Sintaxe básica: [a-zA-Z\\s]+, \\d+, \\w+, etc.
+
+Uso em String.matches()
+
+Aplicações práticas: nome, e-mail, etc.
+
+Declaração e escopo de variáveis
+
+Onde declarar variáveis para usá-las fora de loops
+
+Tipos primitivos (int, double) e autoboxing (Integer, Double)
+
+🟠 Prioridade Baixa (Você demonstrou domínio ou entendeu com facilidade)
+Leitura de múltiplos dados sequenciais
+
+Leitura de nome, idade, salário, e-mail em sequência
+
+Armazenamento e exibição dos dados
+
+Mensagens e feedback ao usuário
+
+Uso de System.out.print() vs System.out.println()
+
+Clareza das mensagens de erro e sucesso
+
+✅ Sugestão de estudo:
+📆 Estudo progressivo (em dias separados):
+Dia	Tópico recomendado
+1	Tratamento de exceções + Scanner + buffer
+2	Conversão de dados + validação numérica
+3	Regex e validação de textos (nome/email)
+4	Refatoração de código + escopo de variáveis
+5	Exercícios práticos com tudo junto
+
+
+
+=================================================================================================
+from fpdf import FPDF
+
+# Criar o conteúdo do PDF
+titulo = "Plano de Estudo - Tratamento de Exceções e Validação em Java"
+conteudo = [
+    ("📚 Lista de Tópicos para Estudo (Com Prioridade)", ""),
+    ("🟢 Prioridade Alta (Essencial e com maior dificuldade identificada)", ""),
+    ("1. Tratamento de Exceções em Java (try-catch)",
+     "- Uso do try, catch, e finally\n- Ordem correta dos blocos catch (específico antes do genérico)\n- Diferença entre Exception, RuntimeException, IllegalArgumentException, NumberFormatException"),
+    ("2. Conversão de Strings para Números",
+     "- Integer.parseInt(), Double.parseDouble()\n- Como capturar erros com NumberFormatException"),
+    ("3. Uso correto do Scanner",
+     "- Diferença entre next(), nextLine(), nextInt()\n- Problemas de buffer e como evitá-los"),
+    ("4. Laços de repetição com validação (while(true) + break)",
+     "- Uso para validar entrada até que esteja correta\n- Combinação com try-catch dentro de loops"),
+    ("🟡 Prioridade Média (Compreensão razoável, mas ainda merece atenção)", ""),
+    ("5. Regex (Expressões Regulares) em Java",
+     "- Sintaxe básica: [a-zA-Z\\\\s]+, \\\\d+, \\\\w+\n- Uso com String.matches()\n- Aplicações: validação de nome, e-mail, etc."),
+    ("6. Declaração e escopo de variáveis",
+     "- Onde declarar variáveis para reutilização\n- Tipos primitivos vs objetos wrapper (int vs Integer)"),
+    ("🟠 Prioridade Baixa (Você demonstrou domínio ou entendeu com facilidade)", ""),
+    ("7. Leitura de múltiplos dados sequenciais",
+     "- Leitura de nome, idade, salário, e-mail\n- Armazenamento e exibição simples"),
+    ("8. Mensagens e feedback ao usuário",
+     "- Diferença entre print e println\n- Mensagens de erro claras e úteis"),
+    ("📆 Sugestão de Estudo (Progressiva por Dia)", ""),
+    ("Dia 1", "Tratamento de exceções + Scanner + buffer"),
+    ("Dia 2", "Conversão de dados + validação numérica"),
+    ("Dia 3", "Regex e validação de textos (nome/email)"),
+    ("Dia 4", "Refatoração de código + escopo de variáveis"),
+    ("Dia 5", "Exercícios práticos com tudo junto"),
+]
+
+# Criar o PDF
+pdf = FPDF()
+pdf.add_page()
+pdf.set_auto_page_break(auto=True, margin=15)
+pdf.set_font("Arial", 'B', 14)
+pdf.cell(0, 10, titulo, ln=True, align='C')
+pdf.ln(10)
+pdf.set_font("Arial", '', 11)
+
+for titulo_secao, texto in conteudo:
+    if not texto:
+        pdf.set_font("Arial", 'B', 12)
+        pdf.cell(0, 10, titulo_secao, ln=True)
+    else:
+        pdf.set_font("Arial", 'B', 11)
+        pdf.multi_cell(0, 8, titulo_secao)
+        pdf.set_font("Arial", '', 11)
+        pdf.multi_cell(0, 8, texto)
+        pdf.ln(2)
+
+# Salvar o PDF
+pdf.output("Plano_de_Estudo_Java_Tratamento_Excecoes.pdf")
