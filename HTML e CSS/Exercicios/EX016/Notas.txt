@@ -1,3 +1,0 @@
-Aula sobre as diferenças na forma de representar cores com hexadecial, nome e RGB.
-Aula sobre circulo cromático.
-Uso de ferramentas como o adobe color, coolors, colorzila e o paletton
