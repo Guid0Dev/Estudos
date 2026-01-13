@@ -47,7 +47,7 @@ public class Conta {
     public void setStatus(boolean status){
         this.status = status;
     }
-    
+
     //metodos//
 
     public void abrirConta(String tipo){
@@ -91,7 +91,6 @@ public class Conta {
             this.saldo -= 20;
         }
     }
-
     public void mostrar(){
         System.out.print("NumConta: "
             + this.getNumCOnta() + "\n"

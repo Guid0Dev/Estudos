@@ -9,10 +9,6 @@ public class EX004 {
         int x = sc.nextInt();
         int y = sc.nextInt();
 
-        if(){
-           
-        }
-
         sc.close();
     }
 }
