@@ -9,7 +9,6 @@ public class Aluno extends Pessoa{
         System.err.println("matricula será cancelada.");
     }
 
-
     //construtor
     public Aluno(){
         
