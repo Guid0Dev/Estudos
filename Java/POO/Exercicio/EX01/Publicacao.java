@@ -1,4 +1,4 @@
-package POO.Exercicio;
+package POO.Exercicio.EX01;
 
 public interface Publicacao {
     public abstract void abrir();
