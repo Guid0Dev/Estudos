@@ -15,7 +15,6 @@ public class Program {
         LocalDateTime d05 = LocalDateTime.parse("2022-07-20T01:30:26");
         Instant d06 = Instant.parse("2022-07-20T01:30:26Z");
         Instant d07 = Instant.parse("2022-07-20T01:30:26-3:00");
-        LocalDate d08 = LocalDate.parse("20/07/2022", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
         LocalDate.of(2026, 7, 20);
 
@@ -26,6 +25,5 @@ public class Program {
         System.out.println(d05);
         System.out.println(d06);
         System.out.println(d07);
-        System.out.println(d08.toString());
     }
 }
