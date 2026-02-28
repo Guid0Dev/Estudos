@@ -6,7 +6,7 @@ import POO.Heranca.Aula03.entities.SavingAccount;
 
 public class Program {
     public static void main(String[] args) {
-        Account acc = new Account(1001,"Alex", 0.0);
+        BusinessAccount acc = new BusinessAccount();
         BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
 
         //UPCASTING
@@ -16,7 +16,7 @@ public class Program {
 
 
         //DOWNCASTING
-        BusinessAccount acc4 = (BusinessAccount)acc2;
+        BusinessAccount acc4 = (BusinessAccount)acc2; 
         acc4.loan(100.0);
 
         //BusinessAccount acc5 = (BusinessAccount)acc3;
