@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.Scanner;
 import Tratamento.aula03.entities.Reservations;
 
-
 public class Program {
     public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
