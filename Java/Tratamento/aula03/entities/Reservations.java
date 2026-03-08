@@ -1,67 +1,71 @@
 package Tratamento.aula03.entities;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-
+import Tratamento.aula03.modelExceptions.DomainException;
 
 public class Reservations {
+
     private Integer roomNumber;
     private Date checkIn;
     private Date checkOut;
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    public Reservations(int number, java.util.Date checkIn2, java.util.Date checkOut2){
-
-    }
-    public Reservations(int roomNumber, Date checkin, Date checkout) {
+    public Reservations(Integer roomNumber, Date checkIn, Date checkOut) {
         this.roomNumber = roomNumber;
-        this.checkIn = checkin;
-        this.checkOut = checkout;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
     }
 
-    public Integer getRoomNunber() {
+    public Integer getRoomNumber() {
         return roomNumber;
     }
-    public void setRoomNunber(Integer roomNunber) {
-        this.roomNumber = roomNunber;
+
+    public void setRoomNumber(Integer roomNumber) {
+        this.roomNumber = roomNumber;
     }
-    public Date getCheckin() {
+
+    public Date getCheckIn() {
         return checkIn;
     }
-    public Date getCheckout() {
+
+    public Date getCheckOut() {
         return checkOut;
     }
-    
-    public Long duration(){
+
+    public long duration() {
         long diff = checkOut.getTime() - checkIn.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
-    public String updateDates(java.util.Date checkIn2, java.util.Date checkOut2){
 
-        Date now = new Date(roomNumber);
-            if(checkIn2.before(now) || checkOut2.before(now)){
-            return "Error in reservation: Reservation dates for update must be future dates.";
-            }
-            if(!checkOut2.after(checkIn2)){
-                return "Error in reservation: Check-out date must be after check-in date.";
-            }
+    public void updateDates(Date checkIn, Date checkOut) throws DomainException {
+
+        Date now = new Date();
+
+        if (checkIn.before(now) || checkOut.before(now)){
+            throw new DomainException("Reservation dates for update must be future dates");
+        }
+
+        if (!checkOut.after(checkIn)) {
+            throw new DomainException("Check-out date must be after check-in date.");
+        }
+
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        return null;
     }
-    @Override
-    public String toString(){
+
+    public String toString() {
         return "Room "
-        + roomNumber
-        + ", check-in: "
-        + sdf.format(checkIn)
-        + ", check-out: "
-        + sdf.format(checkOut)
-        + ", "
-        + duration()
-        + " nights";
+                + roomNumber
+                + ", check-in: "
+                + sdf.format(checkIn)
+                + ", check-out: "
+                + sdf.format(checkOut)
+                + ", "
+                + duration()
+                + " nights";
     }
 }
