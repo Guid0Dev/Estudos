@@ -1,4 +1,4 @@
-package Arquivos;
+package Arquivos.aula02.application;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
