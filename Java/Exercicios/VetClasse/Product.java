@@ -5,7 +5,7 @@ public class Product {
     private double price;
 
     public Product(String n, double p){
-        this.name = n;
+        this.name = n;  
         this.price = p;
     }
 
