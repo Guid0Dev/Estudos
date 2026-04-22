@@ -1,0 +1,16 @@
+Allan Key
+Dynabook
+Smallralk
+
+Todo código orientado a objeto é:
+Confiável, pois o isolamento entre as partes gera sostware seguro. Ao alterar uma parte, nehuma outra é afetada.
+
+Oportuno, Ao dividir tuso em partes, várias delas podem ser desenvolvidas em paralelo.
+
+Manutenível, Atualizar um software é mais fácil. Uma pequena modificação vai beneficiar todas as partes que usarem o objeto.
+
+Extensível, o software não é estático. Ele deve crescer para permanecer útil.
+
+Reutilizável, você pode utilizar  o código de uma classe em outros sistemas com pequenas adaptações.
+
+Natural, mais fácil de entender. Vocẽ se preocupa mais com a funcionalidade do que com os conceitos técnicos.
