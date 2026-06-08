@@ -1,10 +1,10 @@
-package inter.application;
+package aula01.application;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import inter.entities.model.CarRental;
-import inter.entities.model.Vehicle;
+import aula01.entities.model.CarRental;
+import aula01.entities.model.Vehicle;
 
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;

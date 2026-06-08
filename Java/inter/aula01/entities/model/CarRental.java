@@ -1,4 +1,4 @@
-package inter.entities.model;
+package aula01.entities.model;
 
 import java.time.LocalDateTime;
 

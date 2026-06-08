@@ -1,4 +1,4 @@
-package inter.entities.model;
+package aula01.entities.model;
 
 public class Vehicle {
     

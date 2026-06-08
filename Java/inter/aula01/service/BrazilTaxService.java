@@ -1,4 +1,4 @@
-package inter.service;
+package aula01.service;
 
 public class BrazilTaxService {
     public double tax(double amount){
