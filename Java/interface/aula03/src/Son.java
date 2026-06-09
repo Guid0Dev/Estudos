@@ -8,5 +8,4 @@ public final class Son extends Mother{
     public void setFavoriteToy(String favoriteToy) {
         this.favoriteToy = favoriteToy;
     }
-    
 }
