@@ -10,7 +10,6 @@
     --cor3:#2fa866;
     --cor4:#1a5c37;
     --cor5: #063d1e;
-
     --font-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
 }
@@ -25,11 +24,16 @@ body{
     font-family: var(--font-padrao);
 }
 
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
 header{
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     min-height: 150px;
     text-align: center;
 }
+
 header >h1{
     color: white;
     font-family: var(--fonte-destaque);
@@ -37,6 +41,7 @@ header >h1{
     padding-top: 40px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
+
 header > p {
     font-family: var(--font-padrao);
     font-size: 1.2em;
@@ -47,6 +52,7 @@ header > p {
     margin: auto;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
 }
+
 nav {
     background-color: var(--cor5);
     padding: 10px;
@@ -66,6 +72,7 @@ nav > a:hover {
     background-color: var(--cor2);
     color: var(--cor5);
 }
+
 main {
     background-color: white;
     min-width: 300px;
@@ -85,11 +92,13 @@ main p {
     line-height: 2em;
     font-size: 1em;
 }
+
 main strong {
     color: var(--cor4);
     font-weight: bold;
     padding: 2px 6px;
 }
+
 main a{
     text-decoration: none;
     font-weight: bold;
@@ -102,10 +111,12 @@ main a:hover{
     text-decoration: underline;
     color: var(--cor4);
 }
+
 main h1 {
     color: var(--cor5);
     font-family: var(--fonte-destaque);
 }
+
 main h2{
     font-family: var(--fonte-destaque);
     color: var(--cor4);
@@ -113,7 +124,6 @@ main h2{
     background-image: linear-gradient(to right, var(--cor1), transparent);
     text-indent: 8px;
 }
-
 
 main img{
     width: 100%;
@@ -124,7 +134,43 @@ main img.pequena{
     margin:auto;
     display: block;
 }
+
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
 footer{
     background-color: var(--cor5);
     color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
 }
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
