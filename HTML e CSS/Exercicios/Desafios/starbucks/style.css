@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-famiy: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 section
@@ -89,7 +89,7 @@ text-decoration: none;
     font-weight: 900;
 }
 
-content .textBox p
+.content .textBox p
 {
     color: #333;
 }
