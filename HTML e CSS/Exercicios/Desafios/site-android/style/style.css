@@ -34,7 +34,7 @@ header{
     text-align: center;
 }
 
-header >h1{
+header > h1{
     color: white;
     font-family: var(--fonte-destaque);
     font-size: 3em;
